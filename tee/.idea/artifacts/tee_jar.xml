@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tee:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tee_jar</output-path>
+    <root id="archive" name="tee.jar">
+      <element id="module-output" name="tee" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk15on/1/57/org/bouncycastle/bcprov-jdk15on/1.57/bcprov-jdk15on-1.57.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.9/commons-codec-1.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/iharder/base64/2.3.8/base64-2.3.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

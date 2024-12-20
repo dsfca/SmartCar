@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block page_title %}Remote Car Control{% endblock %}
+{% block body %}
+    {{ super() }}
+
+    <h4>Welcome to your Car Control Panel<h4>
+
+    <hr>
+    <h3>Fuel Level</h3>
+    {% if fuel_level > 5 %}
+    <p style="color:green;"> Fuel Level: {{fuel_level}} Liters</p>
+    {% else %}
+    <p style="color:red;"> Fuel Level: {{fuel_level}} Liters</p>
+    <p>Please, refuel your car as soon as possible.</p>
+    {% endif %}
+
+    <hr>
+    <h3>Tire Pressure</h3>
+    <p style="color:green;"> Correct Pressure</p>
+    <p style="color:red;"> Check Tire Pressure</p>
+    <br>
+
+    {% if front_left > 2 and front_left < 3.5%}
+    <p style="color:green;"> Front Left: {{front_left}} bar</p>
+    {% else %}
+    <p style="color:red;"> Front Left: {{front_left}} bar</p>
+    {% endif %}
+    
+    {% if front_right > 2 and front_right < 3.5%}
+    <p style="color:green;"> Front Right: {{front_right}} bar</p>
+    {% else %}
+    <p style="color:red;"> Front Right: {{front_right}} bar</p>
+    {% endif %}
+       
+    {% if rear_left > 2 and rear_left < 3.5%}
+    <p style="color:green;"> Rear Left: {{rear_left}} bar</p>
+    {% else %}
+    <p style="color:red;"> Rear Left: {{rear_left}} bar</p>
+    {% endif %}
+       
+    {% if rear_right > 2 and rear_right < 3.5%}
+    <p style="color:green;"> Rear Right: {{rear_right}} bar</p>
+    {% else %}
+    <p style="color:red;"> Rear Right: {{rear_right}} bar</p>
+    {% endif %}
+    
+
+    <hr>
+    <h3>A/C Temperature</h3>
+    <p> Current A/C Temp: {{ac_temp}} Cº</p>
+    <div class="form-group">
+      <label for="textArea" class="col-lg-3 control-label">Set Temperature</label>
+      <div class="col-lg-9">
+      <form action="/set_temp" method="post">
+        <input class="form-control" name="temperature"></input>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      </div>
+    </div>
+    <hr>
+    
+    <hr>
+    <h3>Car Doors</h3>
+    <form action="/set_doors", method="post">
+    <div class="form-row align-items-center">
+    <div class="col-auto my-1">
+      <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+      <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="a">
+        <option selected>Choose...</option>
+        <option value="Open">Open</option>
+        <option value="Close">Close</option>
+      </select>
+    </div>
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </form>
+    <hr>
+
+    <h3>Load App</h3>
+    <form action="/set_binary" method="post">
+        <input type="submit" name="upvote" value="Send Binary" />
+    </form>
+    <hr>
+{% endblock %}

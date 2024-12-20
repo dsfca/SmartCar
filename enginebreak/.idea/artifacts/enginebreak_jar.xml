@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="enginebreak:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/enginebreak_jar</output-path>
+    <root id="archive" name="enginebreak.jar">
+      <element id="module-output" name="enginebreak" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/bouncycastle/bcprov-jdk15on/1/57/org/bouncycastle/bcprov-jdk15on/1.57/bcprov-jdk15on-1.57.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

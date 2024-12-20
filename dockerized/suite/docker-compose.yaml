@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+   mapp:
+     image: mapp 
+     ports:
+       - "5000:5000"
+     restart: always
+
+   msrv:
+     image: msrv
+     ports:
+       - "8080:8080"
+       - "4848:4848"
+     restart: always
+  
+   mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes: 
+      - ../mongo_data:/data/db
